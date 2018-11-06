@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import ProduceDisplay from './ProduceDisplay';
 
 function Produce(props){
   return(
@@ -20,7 +20,7 @@ function Produce(props){
           }
           .scrollDiv::-webkit-scrollbar-track {
             padding: 2px 0;
-            background-color: lightblue;
+            background: linear-gradient(lightblue, #c1e1ec, #c1e1ec, lightblue);
           }
 
           .scrollDiv::-webkit-scrollbar {
@@ -29,18 +29,14 @@ function Produce(props){
 
           .scrollDiv::-webkit-scrollbar-thumb {
             border-radius: 20px;
-            background-color: grey;
+            background: rgba(256, 256, 256, 0.3);
           }
 
       `}</style>
       <h3>{props.month}</h3>
       <div className="hideDiv">
         <div className="scrollDiv">
-          <ul>
-          {props.selection.map((selection, index) =>
-            <li>{selection}</li>
-          )}
-          </ul>
+          <ProduceDisplay selection={props.selection}/>
         </div>
       </div>
     </div>

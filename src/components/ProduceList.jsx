@@ -273,20 +273,26 @@ const availableProduce = [
 
 function ProduceList() {
   return(
-    <div className='produceListStyle'>
-      <style jsx>{`
-          .produceListStyle {
+    <div>
+      <h2 className='produceTitle'>What's in Season?</h2>
+      <div className='produceListStyle'>
+        <style jsx>{`
+            .produceListStyle {
               display: flex;
               flex-wrap: wrap;
-          }
-      `}</style>
-      {availableProduce.map((produce, index) =>
-        <Produce month={produce.month}
-          selection={produce.selection}
-          key={index}/>
-      )}
-    </div>
-  );
-}
-
-export default ProduceList;
+            }
+            .produceTitle {
+              text-align: center;
+            }
+            `}</style>
+          {availableProduce.map((produce, index) =>
+            <Produce month={produce.month}
+              selection={produce.selection}
+              key={index}/>
+          )}
+        </div>
+      </div>
+    );
+  }
+  
+  export default ProduceList;

@@ -2,11 +2,17 @@ import React from 'react';
 import Logo from './Logo';
 import Navbar from './Navbar';
 
+
 function Header(){
   return(
-    <div>
+    <div className='headerStyle'>
       <Logo/>
       <Navbar/>
+      <style jsx>{`
+            .headerStyle {
+              display: flex;
+            }
+                `}</style>
     </div>
   );
 }

@@ -43,11 +43,18 @@ const marketSchedule = [
 
 function LocationList() {
   return(
+    <div>
+      <h2 className='scheduleTitle'>Weekly Schedule</h2>
     <div className='locationListStyle'>
+
       <style jsx>{`
           .locationListStyle {
               display: flex;
-              flex-wrap: wrap;
+              height: 300px;
+          }
+          .scheduleTitle {
+            text-align: center;
+            color: #F57C00;
           }
       `}</style>
       {marketSchedule.map((schedule, index) =>
@@ -57,6 +64,7 @@ function LocationList() {
           booth={schedule.booth}
           key={index}/>
       )}
+    </div>
     </div>
 
   );

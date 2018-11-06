@@ -21,3 +21,7 @@ if (module.hot) {
   });
 }
 /*eslint-enable */
+
+document.body.style.background = '#FCF8F4';
+document.body.style.margin = '0';
+document.body.style.padding = '0';
