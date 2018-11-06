@@ -2,14 +2,10 @@ import React from 'react';
 import LocationList from './LocationList';
 import ProduceList from './ProduceList';
 
+function OutputBox(){
+  return(
 
-function App(){
-  return (
-    <div>
-      <LocationList/>
-      <ProduceList/>
-    </div>
   );
 }
 
-export default App;
+export default OutputBox;
