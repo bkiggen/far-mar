@@ -41,30 +41,32 @@ const marketSchedule = [
   }
 ];
 
+
+const testStyles = {
+  textAlign: "center",
+}
+
 function LocationList() {
   return(
     <div>
-      <h2 className='scheduleTitle'>Weekly Schedule</h2>
-    <div className='locationListStyle'>
+      <h2 className='scheduleTitle' style={testStyles}>Weekly Schedule</h2>
+      <div className='locationListStyle'>
 
-      <style jsx>{`
-          .locationListStyle {
+        <style jsx>{`
+            .locationListStyle {
               display: flex;
               height: 300px;
-          }
-          .scheduleTitle {
-            text-align: center;
-            color: #F57C00;
-          }
-      `}</style>
-      {marketSchedule.map((schedule, index) =>
-        <Location day={schedule.day}
-          location={schedule.location}
-          hours={schedule.hours}
-          booth={schedule.booth}
-          key={index}/>
-      )}
-    </div>
+            }
+
+        `}</style>
+        {marketSchedule.map((schedule, index) =>
+          <Location day={schedule.day}
+            location={schedule.location}
+            hours={schedule.hours}
+            booth={schedule.booth}
+            key={index}/>
+        )}
+      </div>
     </div>
 
   );

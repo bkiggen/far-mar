@@ -271,28 +271,30 @@ const availableProduce = [
   }
 ];
 
+const testStyles = {
+  textAlign: "center",
+}
+
 function ProduceList() {
   return(
     <div>
-      <h2 className='produceTitle'>What's in Season?</h2>
+      <h2 className='produceTitle' style={testStyles}>What's in Season?</h2>
       <div className='produceListStyle'>
         <style jsx>{`
             .produceListStyle {
               display: flex;
               flex-wrap: wrap;
             }
-            .produceTitle {
-              text-align: center;
-            }
+
             `}</style>
-          {availableProduce.map((produce, index) =>
-            <Produce month={produce.month}
-              selection={produce.selection}
-              key={index}/>
-          )}
-        </div>
+        {availableProduce.map((produce, index) =>
+          <Produce month={produce.month}
+            selection={produce.selection}
+            key={index}/>
+        )}
       </div>
-    );
-  }
-  
-  export default ProduceList;
+    </div>
+  );
+}
+
+export default ProduceList;
