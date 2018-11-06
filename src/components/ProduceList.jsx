@@ -273,7 +273,13 @@ const availableProduce = [
 
 function ProduceList() {
   return(
-    <div>
+    <div className='produceListStyle'>
+      <style jsx>{`
+          .produceListStyle {
+              display: flex;
+              flex-wrap: wrap;
+          }
+      `}</style>
       {availableProduce.map((produce, index) =>
         <Produce month={produce.month}
           selection={produce.selection}
